@@ -1,9 +1,7 @@
-package org.example;
+package org.portfoliotracker;
 
-import org.example.db.AssetRepository;
-import org.example.models.Asset;
-import org.example.models.Portfolio;
-import org.example.services.PortfolioService;
+import org.portfoliotracker.db.AssetRepository;
+import org.portfoliotracker.services.PortfolioService;
 
 import java.util.Scanner;
 
@@ -20,8 +18,10 @@ public class Main {
             if (choice == 1) {
                 System.out.print("Enter symbol (e.g., Bitcoin): ");
                 String symbol = scanner.next();
+
                 System.out.print("Enter quantity: ");
                 double quantity = scanner.nextDouble();
+
                 service.addAsset(symbol, quantity);
             } else if (choice == 2) {
                 System.out.println("Total Portfolio Value = £" + service.getTotalValue());

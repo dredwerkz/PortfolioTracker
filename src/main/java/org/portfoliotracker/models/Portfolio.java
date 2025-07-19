@@ -1,6 +1,6 @@
-package org.example.models;
+package org.portfoliotracker.models;
 
-import org.example.services.PriceFetcher;
+import org.portfoliotracker.services.PriceFetcher;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

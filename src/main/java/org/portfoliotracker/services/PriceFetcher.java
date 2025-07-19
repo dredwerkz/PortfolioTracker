@@ -1,4 +1,4 @@
-package org.example.services;
+package org.portfoliotracker.services;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;

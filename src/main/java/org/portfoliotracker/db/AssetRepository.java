@@ -1,7 +1,6 @@
-package org.example.db;
+package org.portfoliotracker.db;
 
-import org.example.models.Asset;
-import org.sqlite.core.DB;
+import org.portfoliotracker.models.Asset;
 
 import java.sql.*;
 import java.util.ArrayList;

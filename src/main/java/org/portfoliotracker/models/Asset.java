@@ -1,4 +1,4 @@
-package org.example.models;
+package org.portfoliotracker.models;
 
 public class Asset {
     private String symbol;

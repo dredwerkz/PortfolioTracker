@@ -1,10 +1,9 @@
-package org.example.services;
+package org.portfoliotracker.services;
 
-import org.example.db.AssetRepository;
-import org.example.models.Asset;
-import org.example.models.Portfolio;
+import org.portfoliotracker.db.AssetRepository;
+import org.portfoliotracker.models.Asset;
+import org.portfoliotracker.models.Portfolio;
 
-import javax.sound.sampled.Port;
 import java.io.IOException;
 
 public class PortfolioService {
