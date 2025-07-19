@@ -1,13 +1,17 @@
 package org.example;
 
-import org.example.model.Asset;
-import org.example.model.Portfolio;
+import org.example.db.AssetRepository;
+import org.example.models.Asset;
+import org.example.models.Portfolio;
+import org.example.services.PortfolioService;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
-        Portfolio portfolio = new Portfolio();
+        AssetRepository repository = new AssetRepository();
+        PortfolioService service = new PortfolioService(repository);
 
         while (true) {
             System.out.println("1. Add Asset\n2. Show Portfolio Value\n3. Exit");
@@ -18,10 +22,9 @@ public class Main {
                 String symbol = scanner.next();
                 System.out.print("Enter quantity: ");
                 double quantity = scanner.nextDouble();
-                portfolio.addAsset(new Asset(symbol, quantity));
+                service.addAsset(symbol, quantity);
             } else if (choice == 2) {
-                double totalValue = portfolio.calculateTotalValue();
-                System.out.println("Total Portfolio Value = £" + totalValue);
+                System.out.println("Total Portfolio Value = £" + service.getTotalValue());
             } else {
                 break;
             }

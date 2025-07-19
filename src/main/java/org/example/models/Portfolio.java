@@ -1,4 +1,4 @@
-package org.example.model;
+package org.example.models;
 
 import org.example.services.PriceFetcher;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Portfolio {
-    private List<Asset> assets = new ArrayList<>();
+    private final List<Asset> assets = new ArrayList<>();
 
     public void addAsset(Asset asset) {
         assets.add(asset);
